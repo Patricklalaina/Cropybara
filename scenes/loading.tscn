@@ -1,0 +1,144 @@
+[gd_scene load_steps=13 format=3 uid="uid://w7bkw6k0ag5w"]
+
+[ext_resource type="Script" uid="uid://dpl4dirn22l84" path="res://scripts/loader.gd" id="1_ir5ef"]
+[ext_resource type="Texture2D" uid="uid://cnaodvrleffww" path="res://assets/animation.png" id="2_yc7uc"]
+[ext_resource type="Texture2D" uid="uid://bslfs6olktlic" path="res://assets/Bg.png" id="3_101rs"]
+[ext_resource type="Texture2D" uid="uid://tdbk502lb473" path="res://assets/Fill.png" id="4_yt702"]
+[ext_resource type="FontFile" uid="uid://bhbg0p4ioccxy" path="res://fonts/shogunate.ttf" id="5_yt702"]
+[ext_resource type="Texture2D" uid="uid://ditqkap8guqdw" path="res://assets/capybara.png" id="6_2ytni"]
+[ext_resource type="FontFile" uid="uid://loux203g2axa" path="res://fonts/BBHSansBogle-Regular.ttf" id="6_nxo4k"]
+
+[sub_resource type="Animation" id="Animation_dhqfv"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("animation:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_yc7uc"]
+resource_name = "loader"
+length = 0.6
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("animation:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_101rs"]
+_data = {
+&"RESET": SubResource("Animation_dhqfv"),
+&"loader": SubResource("Animation_yc7uc")
+}
+
+[sub_resource type="LabelSettings" id="LabelSettings_2ytni"]
+font = ExtResource("5_yt702")
+font_size = 30
+
+[sub_resource type="LabelSettings" id="LabelSettings_yt702"]
+font = ExtResource("6_nxo4k")
+
+[node name="Loading" type="Node2D"]
+
+[node name="container" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1150.0
+offset_bottom = 657.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_ir5ef")
+
+[node name="ColorRect" type="ColorRect" parent="container"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.43526, 0.869653, 0.506238, 0.443137)
+
+[node name="animation" type="Sprite2D" parent="container/ColorRect"]
+texture_filter = 1
+position = Vector2(175, 424)
+scale = Vector2(0.315928, 0.315928)
+texture = ExtResource("2_yc7uc")
+hframes = 7
+
+[node name="player" type="AnimationPlayer" parent="container/ColorRect"]
+libraries = {
+&"": SubResource("AnimationLibrary_101rs")
+}
+
+[node name="chargement" type="TextureProgressBar" parent="container"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -400.0
+offset_top = 115.0
+offset_right = 400.0
+offset_bottom = 195.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_under = ExtResource("3_101rs")
+texture_progress = ExtResource("4_yt702")
+
+[node name="value" type="Label" parent="container/chargement"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.0
+offset_top = -36.0
+offset_right = 37.0
+offset_bottom = 35.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "0%"
+label_settings = SubResource("LabelSettings_2ytni")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="component" type="Label" parent="container"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -391.0
+offset_top = -121.0
+offset_right = 399.0
+offset_bottom = -98.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "| Load component"
+label_settings = SubResource("LabelSettings_yt702")
+vertical_alignment = 1
+
+[node name="Capybara" type="Sprite2D" parent="."]
+position = Vector2(585, 227)
+scale = Vector2(0.318519, 0.318519)
+texture = ExtResource("6_2ytni")

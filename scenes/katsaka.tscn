@@ -1,0 +1,33 @@
+[gd_scene load_steps=6 format=3 uid="uid://bgvkmn1g0iqny"]
+
+[ext_resource type="Texture2D" uid="uid://bwxlmjmkw4aca" path="res://assets/obj/katsaka.png" id="1_hm7o3"]
+[ext_resource type="Script" uid="uid://dmybigmcf0h8n" path="res://scripts/katsaka.gd" id="1_lmj54"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_lmj54"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lmj54"]
+size = Vector2(47, 101)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hm7o3"]
+size = Vector2(228, 571)
+
+[node name="katsaka" type="StaticBody2D"]
+z_index = 5
+material = SubResource("ShaderMaterial_lmj54")
+script = ExtResource("1_lmj54")
+
+[node name="img" type="Sprite2D" parent="."]
+texture = ExtResource("1_hm7o3")
+
+[node name="collide" type="CollisionShape2D" parent="."]
+position = Vector2(-13.5, 197.5)
+shape = SubResource("RectangleShape2D_lmj54")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="detect" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-7, 46.5)
+shape = SubResource("RectangleShape2D_hm7o3")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

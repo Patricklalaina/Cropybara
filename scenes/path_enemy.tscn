@@ -1,0 +1,125 @@
+[gd_scene load_steps=2 format=3 uid="uid://bawe7v6v1p7al"]
+
+[ext_resource type="PackedScene" uid="uid://dlu3qiec6ny7i" path="res://scenes/marker_2d.tscn" id="1_v63uq"]
+
+[node name="path_enemy" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Marker2D" parent="." instance=ExtResource("1_v63uq")]
+visible = false
+position = Vector2(615, 288)
+
+[node name="Marker2D2" parent="." instance=ExtResource("1_v63uq")]
+visible = false
+position = Vector2(615, 364)
+
+[node name="Marker2D3" parent="." instance=ExtResource("1_v63uq")]
+visible = false
+position = Vector2(615, 463)
+
+[node name="Marker2D4" parent="." instance=ExtResource("1_v63uq")]
+visible = false
+position = Vector2(615, 555)
+
+[node name="Marker2D5" parent="." instance=ExtResource("1_v63uq")]
+visible = false
+position = Vector2(615, 628)
+
+[node name="Marker2D6" parent="." instance=ExtResource("1_v63uq")]
+visible = false
+position = Vector2(501, 628)
+
+[node name="Marker2D7" parent="." instance=ExtResource("1_v63uq")]
+visible = false
+position = Vector2(502, 754)
+
+[node name="Marker2D8" parent="." instance=ExtResource("1_v63uq")]
+visible = false
+position = Vector2(502, 864)
+
+[node name="Marker2D9" parent="." instance=ExtResource("1_v63uq")]
+visible = false
+position = Vector2(502, 1046)
+
+[node name="Marker2D10" parent="." instance=ExtResource("1_v63uq")]
+visible = false
+position = Vector2(775, 1062)
+
+[node name="Marker2D11" parent="." instance=ExtResource("1_v63uq")]
+visible = false
+position = Vector2(775, 665)
+
+[node name="Marker2D12" parent="." instance=ExtResource("1_v63uq")]
+visible = false
+position = Vector2(1024, 665)
+
+[node name="Marker2D13" parent="." instance=ExtResource("1_v63uq")]
+visible = false
+position = Vector2(1024, 1057)
+
+[node name="Marker2D14" parent="." instance=ExtResource("1_v63uq")]
+visible = false
+position = Vector2(1324, 1057)
+
+[node name="Marker2D15" parent="." instance=ExtResource("1_v63uq")]
+visible = false
+position = Vector2(1324, 661)
+
+[node name="Marker2D16" parent="." instance=ExtResource("1_v63uq")]
+visible = false
+position = Vector2(299, 638)
+
+[node name="Marker2D17" parent="." instance=ExtResource("1_v63uq")]
+visible = false
+position = Vector2(295, 1052)
+
+[node name="Marker2D18" parent="." instance=ExtResource("1_v63uq")]
+visible = false
+position = Vector2(25, 501)
+
+[node name="Marker2D19" parent="." instance=ExtResource("1_v63uq")]
+visible = false
+position = Vector2(-184, 497)
+
+[node name="Marker2D20" parent="." instance=ExtResource("1_v63uq")]
+visible = false
+position = Vector2(-325, 417)
+
+[node name="Marker2D21" parent="." instance=ExtResource("1_v63uq")]
+visible = false
+position = Vector2(-329, -183)
+
+[node name="Marker2D22" parent="." instance=ExtResource("1_v63uq")]
+visible = false
+position = Vector2(-173, -50)
+
+[node name="Marker2D23" parent="." instance=ExtResource("1_v63uq")]
+visible = false
+position = Vector2(313, -39)
+
+[node name="Marker2D24" parent="." instance=ExtResource("1_v63uq")]
+visible = false
+position = Vector2(332, 257)
+
+[node name="Marker2D25" parent="." instance=ExtResource("1_v63uq")]
+visible = false
+position = Vector2(-10, 280)
+
+[node name="Marker2D26" parent="." instance=ExtResource("1_v63uq")]
+visible = false
+position = Vector2(309, 462)
+
+[node name="Marker2D27" parent="." instance=ExtResource("1_v63uq")]
+visible = false
+position = Vector2(-242, 675)
+
+[node name="Marker2D28" parent="." instance=ExtResource("1_v63uq")]
+visible = false
+position = Vector2(-238, 1021)
+
+[node name="Marker2D29" parent="." instance=ExtResource("1_v63uq")]
+visible = false
+position = Vector2(-33, 1154)

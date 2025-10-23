@@ -1,0 +1,611 @@
+[gd_scene load_steps=32 format=3 uid="uid://bjanop6hgi1qv"]
+
+[ext_resource type="Script" uid="uid://cap5llaj4ks1m" path="res://scripts/game_ui.gd" id="1_djwj0"]
+[ext_resource type="Texture2D" uid="uid://bslfs6olktlic" path="res://assets/Bg.png" id="1_u2dgd"]
+[ext_resource type="Texture2D" uid="uid://ch0e6yf08d5ka" path="res://assets/over.png" id="2_bt76a"]
+[ext_resource type="Texture2D" uid="uid://denuv2vyedigw" path="res://assets/level.png" id="3_djwj0"]
+[ext_resource type="FontFile" uid="uid://loux203g2axa" path="res://fonts/BBHSansBogle-Regular.ttf" id="4_bt76a"]
+[ext_resource type="Texture2D" uid="uid://piigq721uwnr" path="res://assets/life.png" id="4_e0pfi"]
+[ext_resource type="AudioStream" uid="uid://cti6x0cw45lmw" path="res://music/ES_Button Press Click, Tap, Video Game, Main Menu, Select, Positive 03 - Epidemic Sound.mp3" id="7_e0pfi"]
+[ext_resource type="AudioStream" uid="uid://brvhnlir4avee" path="res://music/Intro.wav" id="8_o3bws"]
+[ext_resource type="Script" uid="uid://u2rkok6bes08" path="res://scripts/virtual_joystick.gd" id="9_g2v8e"]
+[ext_resource type="Texture2D" uid="uid://bl10fybbbhqys" path="res://assets/circle.png" id="9_sjwyb"]
+[ext_resource type="Texture2D" uid="uid://b8yuv18n5r32v" path="res://assets/intern.png" id="10_5kh4o"]
+[ext_resource type="Texture2D" uid="uid://bllnre7o2oaqk" path="res://assets/btn_eat.png" id="11_5kh4o"]
+[ext_resource type="Texture2D" uid="uid://dw8wxg26guo1k" path="res://assets/pressed.png" id="12_s2npe"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_djwj0"]
+font = ExtResource("4_bt76a")
+font_size = 40
+
+[sub_resource type="LabelSettings" id="LabelSettings_bt76a"]
+font = ExtResource("4_bt76a")
+font_size = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bt76a"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(1, 1, 1, 0.9)
+corner_radius_top_left = 45
+corner_radius_top_right = 45
+corner_radius_bottom_right = 45
+corner_radius_bottom_left = 45
+shadow_color = Color(0, 0, 0, 0.4)
+shadow_size = 6
+shadow_offset = Vector2(0, 3)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sprint_pressed"]
+bg_color = Color(0.15, 0.6, 0.4, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.9, 0.9, 0.9, 1)
+corner_radius_top_left = 45
+corner_radius_top_right = 45
+corner_radius_bottom_right = 45
+corner_radius_bottom_left = 45
+shadow_size = 3
+shadow_offset = Vector2(0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sprint_normal"]
+bg_color = Color(0.2, 0.6, 1, 0.85)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(1, 1, 1, 0.8)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+shadow_color = Color(0, 0, 0, 0.3)
+shadow_size = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hide_hover"]
+bg_color = Color(0.7, 0.5, 0.3, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(1, 0.8, 0.4, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hide_pressed"]
+bg_color = Color(0.5, 0.3, 0.1, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.6, 0.4, 0.2, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+shadow_size = 2
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hide_normal"]
+bg_color = Color(0.6, 0.4, 0.2, 0.85)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.8, 0.6, 0.3, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+shadow_color = Color(0, 0, 0, 0.3)
+shadow_size = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g2v8e"]
+bg_color = Color(0.16, 0.16, 0.16, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(1, 0.78, 0, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+shadow_size = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1kaiv"]
+bg_color = Color(0.35, 0.35, 0.47, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.59, 0.59, 0.78, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_upmhx"]
+bg_color = Color(0.2, 0.2, 0.27, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.59, 0.59, 0.78, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ihktq"]
+bg_color = Color(0.27, 0.27, 0.35, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.59, 0.59, 0.78, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_igvt4"]
+bg_color = Color(0.2, 0.7, 0.2, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.56, 0.93, 0.56, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x8pta"]
+bg_color = Color(0.1, 0.39, 0.1, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.56, 0.93, 0.56, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2rmtt"]
+bg_color = Color(0.13, 0.55, 0.13, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.56, 0.93, 0.56, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0dnje"]
+bg_color = Color(0.16, 0.05, 0.05, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.8, 0, 0, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+shadow_color = Color(0, 0, 0, 0.8)
+shadow_size = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lab56"]
+bg_color = Color(0.27, 0.27, 0.35, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.59, 0.59, 0.78, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gj1yn"]
+bg_color = Color(0.8, 0.2, 0.2, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(1, 0.4, 0.4, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[node name="game_ui" type="CanvasLayer"]
+script = ExtResource("1_djwj0")
+
+[node name="energy_bar" type="TextureProgressBar" parent="."]
+texture_filter = 1
+offset_left = 13.0
+offset_top = 57.0
+offset_right = 813.0
+offset_bottom = 137.0
+scale = Vector2(0.4, 0.5)
+value = 40.0
+texture_under = ExtResource("1_u2dgd")
+texture_over = ExtResource("2_bt76a")
+texture_progress = ExtResource("4_e0pfi")
+
+[node name="energy" type="Label" parent="energy_bar"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -54.5
+offset_top = -24.0
+offset_right = 54.5
+offset_bottom = 24.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "5 %"
+label_settings = SubResource("LabelSettings_djwj0")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="level_progress" type="TextureProgressBar" parent="."]
+texture_filter = 1
+offset_left = 13.0
+offset_top = 11.0
+offset_right = 813.0
+offset_bottom = 91.0
+scale = Vector2(0.6, 0.5)
+value = 60.0
+texture_under = ExtResource("1_u2dgd")
+texture_over = ExtResource("2_bt76a")
+texture_progress = ExtResource("3_djwj0")
+
+[node name="level" type="Label" parent="level_progress"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -54.5
+offset_top = -24.0
+offset_right = 54.5
+offset_bottom = 24.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "LEVEL 0"
+label_settings = SubResource("LabelSettings_bt76a")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="."]
+texture_filter = 1
+custom_minimum_size = Vector2(80, 0)
+offset_left = 1003.0
+offset_top = 12.0
+offset_right = 1126.0
+offset_bottom = 62.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("4_bt76a")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = SubResource("StyleBoxFlat_bt76a")
+theme_override_styles/hover = SubResource("StyleBoxFlat_bt76a")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_bt76a")
+theme_override_styles/normal = SubResource("StyleBoxFlat_bt76a")
+text = "MENU"
+
+[node name="sound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("7_e0pfi")
+bus = &"sound"
+
+[node name="music" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("8_o3bws")
+bus = &"music"
+
+[node name="android" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+script = ExtResource("9_g2v8e")
+
+[node name="out" type="Sprite2D" parent="android"]
+texture_filter = 1
+position = Vector2(164.25, -174.119)
+scale = Vector2(1.4204, 1.4204)
+texture = ExtResource("9_sjwyb")
+
+[node name="inside" type="Sprite2D" parent="android/out"]
+texture_filter = 1
+texture = ExtResource("10_5kh4o")
+
+[node name="btn_eat" type="TextureButton" parent="android"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -212.0
+offset_top = -264.0
+offset_right = 812.0
+offset_bottom = 760.0
+grow_horizontal = 0
+grow_vertical = 0
+scale = Vector2(0.144862, 0.144862)
+texture_normal = ExtResource("11_5kh4o")
+texture_pressed = ExtResource("12_s2npe")
+texture_hover = ExtResource("12_s2npe")
+
+[node name="btn_sprint" type="Button" parent="android"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -316.0
+offset_top = -142.0
+offset_right = -236.0
+offset_bottom = -62.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0.9, 0.9, 0.9, 1)
+theme_override_fonts/font = ExtResource("4_bt76a")
+theme_override_font_sizes/font_size = 32
+theme_override_styles/focus = SubResource("StyleBoxFlat_bt76a")
+theme_override_styles/hover = SubResource("StyleBoxFlat_sprint_pressed")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_sprint_pressed")
+theme_override_styles/normal = SubResource("StyleBoxFlat_sprint_normal")
+text = "RUN"
+
+[node name="btn_hide" type="Button" parent="android"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -195.0
+offset_top = -109.0
+offset_right = -115.0
+offset_bottom = -29.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0.9, 0.9, 0.9, 1)
+theme_override_fonts/font = ExtResource("4_bt76a")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = SubResource("StyleBoxFlat_bt76a")
+theme_override_styles/hover = SubResource("StyleBoxFlat_hide_hover")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_hide_pressed")
+theme_override_styles/normal = SubResource("StyleBoxFlat_hide_normal")
+text = "hide"
+icon_alignment = 1
+
+[node name="congratulations_modal" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="ColorRect" parent="congratulations_modal"]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color(0, 0, 0, 0.8)
+
+[node name="Panel" type="Panel" parent="congratulations_modal"]
+layout_mode = 0
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -250.0
+offset_top = -200.0
+offset_right = 250.0
+offset_bottom = 200.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_g2v8e")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="congratulations_modal/Panel"]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 30.0
+offset_top = 30.0
+offset_right = -30.0
+offset_bottom = -30.0
+theme_override_constants/separation = 15
+
+[node name="Title" type="Label" parent="congratulations_modal/Panel/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.84, 0, 1)
+theme_override_font_sizes/font_size = 38
+text = "CONGRATULATIONS! "
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Spacer1" type="Control" parent="congratulations_modal/Panel/VBoxContainer"]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+
+[node name="Message" type="Label" parent="congratulations_modal/Panel/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.86, 0.86, 0.86, 1)
+theme_override_font_sizes/font_size = 24
+text = "You completed all levels!
+
+You are the ultimate capybara!"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Spacer2" type="Control" parent="congratulations_modal/Panel/VBoxContainer"]
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 2
+
+[node name="Spacer3" type="Control" parent="congratulations_modal/Panel/VBoxContainer"]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="congratulations_modal/Panel/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 40
+alignment = 1
+
+[node name="btn_menu" type="Button" parent="congratulations_modal/Panel/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(140, 60)
+layout_mode = 2
+theme_override_font_sizes/font_size = 26
+theme_override_styles/hover = SubResource("StyleBoxFlat_1kaiv")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_upmhx")
+theme_override_styles/normal = SubResource("StyleBoxFlat_ihktq")
+text = "MENU"
+
+[node name="btn_replay" type="Button" parent="congratulations_modal/Panel/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(140, 60)
+layout_mode = 2
+theme_override_font_sizes/font_size = 26
+theme_override_styles/hover = SubResource("StyleBoxFlat_igvt4")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_x8pta")
+theme_override_styles/normal = SubResource("StyleBoxFlat_2rmtt")
+text = "REPLAY"
+
+[node name="game_over_modal" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="ColorRect" parent="game_over_modal"]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color(0, 0, 0, 0.9)
+
+[node name="Panel" type="Panel" parent="game_over_modal"]
+layout_mode = 0
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -250.0
+offset_top = -200.0
+offset_right = 250.0
+offset_bottom = 200.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_0dnje")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="game_over_modal/Panel"]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 30.0
+offset_top = 30.0
+offset_right = -30.0
+offset_bottom = -30.0
+theme_override_constants/separation = 15
+
+[node name="Title" type="Label" parent="game_over_modal/Panel/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.2, 0.2, 1)
+theme_override_font_sizes/font_size = 42
+text = "GAME OVER"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Spacer1" type="Control" parent="game_over_modal/Panel/VBoxContainer"]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+
+[node name="Message" type="Label" parent="game_over_modal/Panel/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9, 0.9, 0.9, 1)
+theme_override_font_sizes/font_size = 24
+text = "You ran out of energy!"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Spacer2" type="Control" parent="game_over_modal/Panel/VBoxContainer"]
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 2
+
+[node name="score_label" type="Label" parent="game_over_modal/Panel/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.8, 0, 1)
+theme_override_font_sizes/font_size = 28
+text = "Score: 0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="level_label" type="Label" parent="game_over_modal/Panel/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.7, 0.7, 0.7, 1)
+theme_override_font_sizes/font_size = 24
+text = "Level Reached: 0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Spacer3" type="Control" parent="game_over_modal/Panel/VBoxContainer"]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="game_over_modal/Panel/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 40
+alignment = 1
+
+[node name="btn_menu" type="Button" parent="game_over_modal/Panel/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(140, 60)
+layout_mode = 2
+theme_override_font_sizes/font_size = 26
+theme_override_styles/normal = SubResource("StyleBoxFlat_lab56")
+text = "MENU"
+
+[node name="btn_retry" type="Button" parent="game_over_modal/Panel/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(140, 60)
+layout_mode = 2
+theme_override_font_sizes/font_size = 26
+theme_override_styles/normal = SubResource("StyleBoxFlat_gj1yn")
+text = "RETRY"
+
+[connection signal="pressed" from="Button" to="." method="_on_ui_menu_pressed"]
+[connection signal="finished" from="music" to="." method="_on_music_finished"]
+[connection signal="button_down" from="android/btn_sprint" to="." method="_on_sprint_button_down"]
+[connection signal="button_up" from="android/btn_sprint" to="." method="_on_sprint_button_up"]
+[connection signal="pressed" from="android/btn_sprint" to="." method="_on_sprint_button_pressed_fallback"]
+[connection signal="pressed" from="android/btn_hide" to="." method="_on_hide_button_pressed"]
+[connection signal="pressed" from="congratulations_modal/Panel/VBoxContainer/HBoxContainer/btn_menu" to="." method="_on_congrats_menu_pressed"]
+[connection signal="pressed" from="congratulations_modal/Panel/VBoxContainer/HBoxContainer/btn_replay" to="." method="_on_congrats_replay_pressed"]
+[connection signal="pressed" from="game_over_modal/Panel/VBoxContainer/HBoxContainer/btn_menu" to="." method="_on_gameover_menu_pressed"]
+[connection signal="pressed" from="game_over_modal/Panel/VBoxContainer/HBoxContainer/btn_retry" to="." method="_on_gameover_retry_pressed"]

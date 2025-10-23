@@ -1,0 +1,52 @@
+[gd_scene load_steps=3 format=3 uid="uid://cp51oud1ylnkc"]
+
+[ext_resource type="Texture2D" uid="uid://b422pl7yd7w6t" path="res://assets/champ.png" id="1_7hhd0"]
+[ext_resource type="PackedScene" uid="uid://bgvkmn1g0iqny" path="res://scenes/katsaka.tscn" id="2_k1ysc"]
+
+[node name="katsaka_field" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 226.0
+offset_bottom = 335.0
+
+[node name="terre" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(113, 169)
+scale = Vector2(0.473633, 0.75293)
+texture = ExtResource("1_7hhd0")
+
+[node name="katsaka" parent="." instance=ExtResource("2_k1ysc")]
+position = Vector2(53, 20)
+scale = Vector2(0.32, 0.32)
+
+[node name="katsaka2" parent="." instance=ExtResource("2_k1ysc")]
+position = Vector2(113, 20)
+scale = Vector2(0.32, 0.32)
+
+[node name="katsaka3" parent="." instance=ExtResource("2_k1ysc")]
+position = Vector2(173, 21)
+scale = Vector2(0.32, 0.32)
+
+[node name="katsaka4" parent="." instance=ExtResource("2_k1ysc")]
+position = Vector2(53, 103)
+scale = Vector2(0.32, 0.32)
+
+[node name="katsaka5" parent="." instance=ExtResource("2_k1ysc")]
+position = Vector2(113, 103)
+scale = Vector2(0.32, 0.32)
+
+[node name="katsaka6" parent="." instance=ExtResource("2_k1ysc")]
+position = Vector2(173, 104)
+scale = Vector2(0.32, 0.32)
+
+[node name="katsaka7" parent="." instance=ExtResource("2_k1ysc")]
+position = Vector2(53, 193)
+scale = Vector2(0.32, 0.32)
+
+[node name="katsaka8" parent="." instance=ExtResource("2_k1ysc")]
+position = Vector2(113, 193)
+scale = Vector2(0.32, 0.32)
+
+[node name="katsaka9" parent="." instance=ExtResource("2_k1ysc")]
+position = Vector2(173, 194)
+scale = Vector2(0.32, 0.32)

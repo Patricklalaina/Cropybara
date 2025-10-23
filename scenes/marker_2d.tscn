@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dlu3qiec6ny7i"]
+
+[ext_resource type="Script" uid="uid://cpk72074ntgbk" path="res://path_marker.gd" id="1_f6kg6"]
+
+[node name="Marker2D" type="Marker2D"]
+script = ExtResource("1_f6kg6")

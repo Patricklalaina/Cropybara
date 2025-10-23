@@ -1,0 +1,88 @@
+[gd_scene load_steps=3 format=3 uid="uid://bfty0c5jqagfe"]
+
+[ext_resource type="Texture2D" uid="uid://b422pl7yd7w6t" path="res://assets/champ.png" id="1_we8ym"]
+[ext_resource type="PackedScene" uid="uid://6lm717voaxvj" path="res://scenes/ble.tscn" id="2_7wk3o"]
+
+[node name="ble_field" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -169.0
+offset_right = 282.0
+offset_bottom = 228.0
+
+[node name="terre" type="Sprite2D" parent="."]
+position = Vector2(229, 112)
+scale = Vector2(0.902344, 0.464844)
+texture = ExtResource("1_we8ym")
+
+[node name="ble" parent="." instance=ExtResource("2_7wk3o")]
+position = Vector2(90, 33)
+scale = Vector2(0.165585, 0.165585)
+
+[node name="ble2" parent="." instance=ExtResource("2_7wk3o")]
+position = Vector2(146, 34)
+scale = Vector2(0.165585, 0.165585)
+
+[node name="ble3" parent="." instance=ExtResource("2_7wk3o")]
+position = Vector2(202, 34)
+scale = Vector2(0.165585, 0.165585)
+
+[node name="ble4" parent="." instance=ExtResource("2_7wk3o")]
+position = Vector2(259, 34)
+scale = Vector2(0.165585, 0.165585)
+
+[node name="ble5" parent="." instance=ExtResource("2_7wk3o")]
+position = Vector2(315, 34)
+scale = Vector2(0.165585, 0.165585)
+
+[node name="ble6" parent="." instance=ExtResource("2_7wk3o")]
+position = Vector2(372, 34)
+scale = Vector2(0.165585, 0.165585)
+
+[node name="ble7" parent="." instance=ExtResource("2_7wk3o")]
+position = Vector2(90, 88)
+scale = Vector2(0.165585, 0.165585)
+
+[node name="ble8" parent="." instance=ExtResource("2_7wk3o")]
+position = Vector2(146, 89)
+scale = Vector2(0.165585, 0.165585)
+
+[node name="ble9" parent="." instance=ExtResource("2_7wk3o")]
+position = Vector2(202, 89)
+scale = Vector2(0.165585, 0.165585)
+
+[node name="ble10" parent="." instance=ExtResource("2_7wk3o")]
+position = Vector2(259, 89)
+scale = Vector2(0.165585, 0.165585)
+
+[node name="ble11" parent="." instance=ExtResource("2_7wk3o")]
+position = Vector2(315, 89)
+scale = Vector2(0.165585, 0.165585)
+
+[node name="ble12" parent="." instance=ExtResource("2_7wk3o")]
+position = Vector2(372, 89)
+scale = Vector2(0.165585, 0.165585)
+
+[node name="ble13" parent="." instance=ExtResource("2_7wk3o")]
+position = Vector2(90, 147)
+scale = Vector2(0.165585, 0.165585)
+
+[node name="ble14" parent="." instance=ExtResource("2_7wk3o")]
+position = Vector2(146, 148)
+scale = Vector2(0.165585, 0.165585)
+
+[node name="ble15" parent="." instance=ExtResource("2_7wk3o")]
+position = Vector2(202, 148)
+scale = Vector2(0.165585, 0.165585)
+
+[node name="ble16" parent="." instance=ExtResource("2_7wk3o")]
+position = Vector2(259, 148)
+scale = Vector2(0.165585, 0.165585)
+
+[node name="ble17" parent="." instance=ExtResource("2_7wk3o")]
+position = Vector2(315, 148)
+scale = Vector2(0.165585, 0.165585)
+
+[node name="ble18" parent="." instance=ExtResource("2_7wk3o")]
+position = Vector2(372, 148)
+scale = Vector2(0.165585, 0.165585)

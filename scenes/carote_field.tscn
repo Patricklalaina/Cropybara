@@ -1,0 +1,98 @@
+[gd_scene load_steps=3 format=3 uid="uid://bcsacy6x3f1br"]
+
+[ext_resource type="Texture2D" uid="uid://b422pl7yd7w6t" path="res://assets/champ.png" id="1_wkq3m"]
+[ext_resource type="PackedScene" uid="uid://bblk0wyrtjnj0" path="res://scenes/carotte.tscn" id="2_4xw2a"]
+
+[node name="carote_field" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -174.0
+offset_top = 577.0
+offset_right = 147.0
+offset_bottom = 1092.0
+
+[node name="terre" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(158.313, 259.5)
+scale = Vector2(0.708252, 1.25195)
+texture = ExtResource("1_wkq3m")
+
+[node name="carotte" parent="." instance=ExtResource("2_4xw2a")]
+position = Vector2(55, 80)
+scale = Vector2(0.199998, 0.199998)
+
+[node name="carotte2" parent="." instance=ExtResource("2_4xw2a")]
+position = Vector2(125, 80)
+scale = Vector2(0.199998, 0.199998)
+
+[node name="carotte3" parent="." instance=ExtResource("2_4xw2a")]
+position = Vector2(196, 80)
+scale = Vector2(0.199998, 0.199998)
+
+[node name="carotte4" parent="." instance=ExtResource("2_4xw2a")]
+position = Vector2(268, 80)
+scale = Vector2(0.199998, 0.199998)
+
+[node name="carotte5" parent="." instance=ExtResource("2_4xw2a")]
+position = Vector2(55, 172)
+scale = Vector2(0.199998, 0.199998)
+
+[node name="carotte6" parent="." instance=ExtResource("2_4xw2a")]
+position = Vector2(125, 172)
+scale = Vector2(0.199998, 0.199998)
+
+[node name="carotte7" parent="." instance=ExtResource("2_4xw2a")]
+position = Vector2(196, 172)
+scale = Vector2(0.199998, 0.199998)
+
+[node name="carotte8" parent="." instance=ExtResource("2_4xw2a")]
+position = Vector2(268, 172)
+scale = Vector2(0.199998, 0.199998)
+
+[node name="carotte9" parent="." instance=ExtResource("2_4xw2a")]
+position = Vector2(55, 266)
+scale = Vector2(0.199998, 0.199998)
+
+[node name="carotte10" parent="." instance=ExtResource("2_4xw2a")]
+position = Vector2(125, 266)
+scale = Vector2(0.199998, 0.199998)
+
+[node name="carotte11" parent="." instance=ExtResource("2_4xw2a")]
+position = Vector2(196, 266)
+scale = Vector2(0.199998, 0.199998)
+
+[node name="carotte12" parent="." instance=ExtResource("2_4xw2a")]
+position = Vector2(268, 266)
+scale = Vector2(0.199998, 0.199998)
+
+[node name="carotte13" parent="." instance=ExtResource("2_4xw2a")]
+position = Vector2(55, 357)
+scale = Vector2(0.199998, 0.199998)
+
+[node name="carotte14" parent="." instance=ExtResource("2_4xw2a")]
+position = Vector2(125, 357)
+scale = Vector2(0.199998, 0.199998)
+
+[node name="carotte15" parent="." instance=ExtResource("2_4xw2a")]
+position = Vector2(196, 357)
+scale = Vector2(0.199998, 0.199998)
+
+[node name="carotte16" parent="." instance=ExtResource("2_4xw2a")]
+position = Vector2(268, 357)
+scale = Vector2(0.199998, 0.199998)
+
+[node name="carotte17" parent="." instance=ExtResource("2_4xw2a")]
+position = Vector2(55, 450)
+scale = Vector2(0.199998, 0.199998)
+
+[node name="carotte18" parent="." instance=ExtResource("2_4xw2a")]
+position = Vector2(125, 450)
+scale = Vector2(0.199998, 0.199998)
+
+[node name="carotte19" parent="." instance=ExtResource("2_4xw2a")]
+position = Vector2(196, 450)
+scale = Vector2(0.199998, 0.199998)
+
+[node name="carotte20" parent="." instance=ExtResource("2_4xw2a")]
+position = Vector2(268, 450)
+scale = Vector2(0.199998, 0.199998)
